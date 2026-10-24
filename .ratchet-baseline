@@ -1,0 +1,5 @@
+files_over_400 0
+bare_except_pass 0
+runtime_deps 1
+mocked_internal_modules 0
+shell_true 0

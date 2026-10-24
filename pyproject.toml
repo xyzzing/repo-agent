@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-agent"
+version = "0.1.0"
+description = "Onboard repositories, generate agent instructions, run bounded coding tasks through DSH, and verify outcomes independently."
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0.2,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "ruff>=0.6", "mypy>=1.11"]
+
+[project.scripts]
+repo-agent = "repo_agent.cli:main"
+
+[tool.setuptools]
+packages = ["repo_agent", "repo_agent.adapters"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".agentic"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

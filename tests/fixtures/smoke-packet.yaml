@@ -1,0 +1,17 @@
+task_schema_version: 1
+task_id: smoke-validate-only
+base_commit: '0123456789abcdef0123456789abcdef01234567'
+goal: 'Packaging smoke: this packet is only parsed, never run'
+read_first: []
+expected_write_scope: []
+acceptance:
+  - 'task validate accepts this packet from an installed wheel'
+invariants: []
+non_goals: []
+verification_commands:
+  - [python3, -c, "print('smoke')"]
+budget:
+  max_attempts: 1
+  timeout_seconds: 60
+required_skills: []
+escalate_when: []

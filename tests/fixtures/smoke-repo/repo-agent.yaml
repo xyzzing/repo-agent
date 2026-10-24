@@ -1,0 +1,14 @@
+schema_version: 1
+project:
+  name: smoke-fixture
+  maturity: new
+commands:
+  lint: [ruff, check, .]
+  test: [pytest, -q]
+  verify: [lint, test]
+instructions:
+  policy_version: '1.0.0'
+skills:
+  required: [code-quality-guard]
+execution:
+  max_attempts: 4

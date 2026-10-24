@@ -1,0 +1,5 @@
+{
+  "checks": [
+    {"name": "gates", "argv": ["make", "gates"], "timeout": 900}
+  ]
+}
